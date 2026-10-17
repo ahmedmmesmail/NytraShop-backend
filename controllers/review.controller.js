@@ -30,7 +30,7 @@ const reviewValidation = joi.object({
 })
 
 export async function createReview(req, res) {
-    let { text, rating, userId, productId } = req.body
+    let { text, rating, userID, productID } = req.body
 
     let { error } = reviewValidation.validate(req.body, { abortEarly: false, convert: false })
 
@@ -45,7 +45,7 @@ export async function createReview(req, res) {
             errors: allErrors
         })
     } else {
-        let result = await reviewModel.insertMany({ text, rating, userId, productId })
+        let result = await reviewModel.insertMany({ text, rating, userID, productID })
         res.json({ message: 'added ', result })
     }
 }
@@ -56,7 +56,7 @@ export async function getAllReviews(req, res) {
 }
 
 export async function updateReview(req, res) {
-    let { _id, text, rating, userId, productId } = req.body
+    let { _id, text, rating, userID, productID } = req.body
 
     let { error } = reviewValidation.validate(req.body, { abortEarly: false, convert: false })
 
@@ -71,7 +71,7 @@ export async function updateReview(req, res) {
             errors: allErrors
         })
     } else {
-        let result = await reviewModel.findOneAndReplace({ _id }, { text, rating, userId, productId }, { new: true })
+        let result = await reviewModel.findOneAndReplace({ _id }, { text, rating, userID, productID }, { new: true })
         res.json({ message: 'success ', result })
     }
 }

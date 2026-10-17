@@ -8,6 +8,7 @@ import { productRouter } from './routers/product.router.js'
 import { reviewRouter } from "./routers/review.router.js"
 import { subcategoryRouter } from './routers/subcategory.router.js'
 import dotenv from 'dotenv'
+
 const app = express()
 const port = 5000
 
