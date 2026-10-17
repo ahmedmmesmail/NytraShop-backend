@@ -128,7 +128,12 @@ project/
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+This project is proprietary software. All rights are reserved by Ahmed Esmail.
+
+The source code is publicly available for portfolio viewing and evaluation only. Copying, modifying, redistributing, or using the code in other projects is prohibited without prior written permission.
+
+See the [LICENSE](LICENSE) file for details.
+
 
 ---
 
